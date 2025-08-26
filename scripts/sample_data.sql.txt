@@ -1,0 +1,48 @@
+Inserting sample data into the departments table.
+-- Departments
+INSERT INTO Departments( deptname, loca_tion)VALUES
+('HR', 'Accra'),
+('Finance', 'Kumasi'),
+('IT', 'Accra'),
+('Marketing', 'Takoradi'),
+('Sales', 'Capecoast');
+
+-- Employees
+INSERT INTO Employees(firstname,lastname, gender, date_of_birth, deptid, jobtitle, salary, managerid) VALUES
+('Kwame', 'Mensah', 'Male', '1990-06-15', 1, 'HR Manager', 5000.00, 1001),
+('Ama', 'Owusu', 'Female', '1992-04-23', 1, 'HR Assistant', 3000.00, NULL),
+('Yaw', 'Boakye', 'Male', '1988-09-11', 3, 'Software Engineer', 6000.00, 1003),
+('Akua', 'Asante', 'Female', '1995-12-05', 3, 'Data Analyst', 4500.00, NULL),
+('Akosua','Aseidu', 'Female', '1994-12-03', 5, 'Sales Manager', 5000.00, 1005),
+('Yaa', 'Yeboah', 'Female', '1999-09-12', 5, 'Sales Assistant', 3000.00, NULL),
+('Kwame', 'Twumasi', 'Male', '1990-08-11', 2, 'Finance Manager', 7000.00, 1002),
+('Nana', 'Owusu', 'Male', '1995-12-09', 2, 'Finance Assistant', 3000.00, NULL),
+('Adjoa', 'Frimpong','Female', '1990-04-23', 4, 'Marketing Manager', 5000.00, 1004),
+('Kwesi', 'Ofori', 'Male', '1999-05-24', 4, 'Marketing Assistant', 3000.00, NULL);
+
+-- Attendance
+INSERT INTO Attendance (empid,date_, emp_status) VALUES
+(1,'2025-06-20', 'Present'),
+(3,'2025-06-21', 'Absent'),
+(5,'2025-06-20', 'Present'),
+(7,'2025-06-21', 'Present'),
+(9, '2025-06-20', 'Leave'),
+(11, '2025-06-21', 'Absent'),
+(13, '2025-06-20', 'Leave'),
+(15, '2025-06-21', 'Present'),
+(17, '2025-06-20', 'Absent'),
+(19, '2025-06-21', 'Leave');
+
+
+-- Payroll
+INSERT INTO Payroll (empid,paydate,basesalary,bonus,deductions,netpay) VALUES
+(1,'2025-06-15', 5000.00, 200.00, 100.00, 5100.00),
+(3,'2025-06-15', 3000.00, 500.00, 300.00, 3200.00),
+(5, '2025-06-15', 6000.00, 400.00, 100.00, 6300.00),
+(7, '2025-06-15', 4500.00, 500.00, 200.00, 4800.00),
+(9, '2025-06-15', 5000.00, 800.00, 400.00, 5400.00),
+(11, '2025-06-15', 3000.00, 1000.00, 200.00, 3800.00),
+(13, '2025-06-15', 7000.00, 600.00, 100.00, 7500.00),
+(15, '2025-06-15', 3000.00, 400.00, 200.00, 3200.00),
+(17, '2025-06-15', 5000.00, 500.00, 100.00, 5400.00),
+(19, '2025-06-15', 3000.00, 1000.00, 200.00, 3800.00);

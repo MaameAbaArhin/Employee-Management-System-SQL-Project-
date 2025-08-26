@@ -1,0 +1,11 @@
+CREATE VIEW MonthlyPayroll AS
+SELECT 
+    E.EmpID,
+    (E.FirstName + ' ' + E.LastName) AS EmployeeName,
+    P.PayDate,
+    P.BaseSalary,
+    P.Bonus,
+    P.Deductions,
+    P.NetPay
+FROM Employees E
+INNER JOIN Payroll P ON E.EmpID = P.EmpID;

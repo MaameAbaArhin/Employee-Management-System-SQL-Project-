@@ -1,0 +1,47 @@
+-- Creating Database. 
+CREATE DATABASE EmployeeMgt
+USE EmployeeMgt
+
+-- Creating Tables
+-- Department Table
+CREATE TABLE Departments
+(
+	deptid INT PRIMARY KEY IDENTITY (1,1),
+	deptname VARCHAR(90) NOT NULL,
+	loca_tion VARCHAR(50) NOT NULL,
+);
+
+-- Employees Table
+CREATE TABLE EMPLOYEES
+(
+	empid INT PRIMARY KEY IDENTITY(1,2),
+	firstname VARCHAR(100),
+	lastname VARCHAR(100),
+	gender VARCHAR(10),
+	date_of_birth DATE, 
+	jobtitle VARCHAR(50),
+	salary DECIMAL(10,2),
+	deptid INT FOREIGN KEY(deptid) REFERENCES Departments(deptid),
+	managerid INT
+);
+
+-- Attendance Table 
+CREATE TABLE Attendance
+(
+	attendanceid INT PRIMARY KEY IDENTITY(1,3),
+	empid INT FOREIGN KEY(empid) REFERENCES Employees(empid),
+	date_ DATE,
+	emp_status VARCHAR(10), CHECK (emp_status IN ('Present', 'Absent', 'Leave'))
+);
+
+-- Payroll Table
+CREATE TABLE Payroll
+(
+	payrollid INT PRIMARY KEY IDENTITY(1,4),
+	empid INT FOREIGN KEY(empid) REFERENCES Employees(empid),
+	paydate DATE,
+	basesalary DECIMAL(10,2),
+	bonus DECIMAL(10,2),
+	deductions DECIMAL(10,2),
+	netpay DECIMAL(10,2)
+);

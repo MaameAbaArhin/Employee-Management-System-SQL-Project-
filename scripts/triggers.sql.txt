@@ -1,0 +1,18 @@
+CREATE TRIGGER trg_PreventDuplicateAttendance
+ON Attendance
+INSTEAD OF INSERT
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    -- Check for duplicates between inserted rows and existing Attendance
+    IF EXISTS (
+        SELECT 1
+        FROM Attendance A
+        JOIN inserted I ON A.empid= I.empid AND A.date_ = I.date_
+    )
+    BEGIN
+        RAISERROR('Attendance for this employee on this date already exists.', 16, 1);
+        RETURN;
+    END
+END;
