@@ -23,4 +23,4 @@ This project implements an Employee Management System using SQL. It manages empl
 
 # 🚀 How to Run
 1. Clone this repo:
-git clone https://github.com/MaameAbaArhin/employee-management-sql.git
+git clone https://github.com/MaameAbaArhin/Employee-Management-System-SQL-Project-
