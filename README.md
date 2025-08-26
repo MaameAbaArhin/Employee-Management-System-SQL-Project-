@@ -1,5 +1,5 @@
 ## 📌 Project Overview
-The **Employee Management System** is a SQL-based project designed to manage employee information, track attendance, and handle payroll processes.  
+The **Employee Management System** is an SQL-based project designed to manage employee information, track attendance, and handle payroll processes.  
 It demonstrates practical database management skills including **DDL, DML, triggers, stored procedures, and views** in SQL Server.
 
 
@@ -9,7 +9,7 @@ It demonstrates practical database management skills including **DDL, DML, trigg
 3. **Attendance Tracking** – Prevent duplicate entries with SQL triggers.  
 4. **Payroll Management** – Calculate employee salaries using stored procedures.  
 5. **Department-wise Reports** – Summarize payroll and employee info with SQL views.
-- 
+
 # 🏗️ Database Schema
 1. Departments – Stores department info (HR, IT, Finance, etc.)
 2. Employees – Employee personal details, salary, department, and manager
